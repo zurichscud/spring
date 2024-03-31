@@ -3,7 +3,6 @@ package com.example.laispring;
 import com.example.laispring.component.MyComponent;
 import com.example.laispring.component.UserService;
 import com.example.laispring.config.LaiSpringConfig;
-import com.example.laispring.ioc.LaiSpringApplicationContext;
 import com.example.laispring.ioc.LaiSpringApplicationContext2;
 
 /**

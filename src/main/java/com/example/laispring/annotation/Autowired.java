@@ -7,11 +7,11 @@ import java.lang.annotation.Target;
 
 /**
  * @Author: zurichscud
- * @Date: 2024/3/31 12:14
+ * @Date: 2024/3/31 14:11
  * @Description: TODO
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Scope {
-    String value() default "singleton";
+public @interface Autowired {
+    //String value() default "";
 }

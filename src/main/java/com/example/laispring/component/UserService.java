@@ -1,7 +1,9 @@
 package com.example.laispring.component;
 
 
+import com.example.laispring.annotation.Autowired;
 import com.example.laispring.annotation.Service;
+import com.example.laispring.processor.InitializingBean;
 
 /**
  * @Author: zurichscud
@@ -9,5 +11,13 @@ import com.example.laispring.annotation.Service;
  * @Description: TODO
  */
 @Service
-public class UserService {
+public class UserService implements InitializingBean {
+    @Autowired
+    private UserDao userDao;
+
+    //初始化方法
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("UserService的初始化方法");
+    }
 }
