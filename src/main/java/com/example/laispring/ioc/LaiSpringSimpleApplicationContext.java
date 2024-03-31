@@ -1,7 +1,7 @@
 package com.example.laispring.ioc;
 
 
-import com.example.laispring.annotation.*;
+import com.example.laispring.annotation.ioc.*;
 import com.example.laispring.config.LaiSpringConfig;
 import org.apache.commons.lang3.StringUtils;
 

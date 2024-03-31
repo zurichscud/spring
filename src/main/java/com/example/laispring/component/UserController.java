@@ -1,6 +1,6 @@
 package com.example.laispring.component;
 
-import com.example.laispring.annotation.Controller;
+import com.example.laispring.annotation.ioc.Controller;
 
 /**
  * @Author: zurichscud

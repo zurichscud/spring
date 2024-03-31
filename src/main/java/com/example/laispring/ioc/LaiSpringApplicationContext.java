@@ -1,7 +1,7 @@
 package com.example.laispring.ioc;
 
 
-import com.example.laispring.annotation.*;
+import com.example.laispring.annotation.ioc.*;
 import com.example.laispring.config.LaiSpringConfig;
 import com.example.laispring.processor.BeanPostProcessor;
 import com.example.laispring.processor.InitializingBean;
@@ -54,7 +54,7 @@ public class LaiSpringApplicationContext {
 
         for (Field field : fields) {
             if (field.isAnnotationPresent(Autowired.class)) {
-                Object o = getBean(field.getName(), field.getType());
+                Object o = getBean(field.getName());
                 try {
                     field.setAccessible(true);
                     field.set(object, o);
@@ -116,7 +116,7 @@ public class LaiSpringApplicationContext {
 
             }
         }
-        throw new RuntimeException("文件夹为空");
+
     }
 
     /**
@@ -183,7 +183,7 @@ public class LaiSpringApplicationContext {
      * @Param:
      * @Return:
      **/
-    public <T> T getBean(String beanName, Class<T> clazz) {
+    public Object getBean(String beanName) {
         for (Map.Entry<String, BeanDefinition> entry : beanDefinitionMap.entrySet()) {
             if (beanName.equals(entry.getKey())) {
                 Object object;
@@ -194,13 +194,14 @@ public class LaiSpringApplicationContext {
                     object = createBean(entry.getKey());
 
                 }
-                if (clazz.isInstance(object)){
-                    return clazz.cast(object);
-                }
+                //if (clazz.isInstance(object)){
+                //    return clazz.cast(object);
+                //}
+                return object;
 
             }
         }
-        return null;
+        return new NullPointerException("bean不存在");
     }
 
     /**

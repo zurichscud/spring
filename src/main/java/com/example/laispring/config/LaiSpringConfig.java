@@ -1,7 +1,7 @@
 package com.example.laispring.config;
 
 
-import com.example.laispring.annotation.ComponentScan;
+import com.example.laispring.annotation.ioc.ComponentScan;
 
 /**
  * @Author: zurichscud

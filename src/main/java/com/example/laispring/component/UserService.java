@@ -1,8 +1,8 @@
 package com.example.laispring.component;
 
 
-import com.example.laispring.annotation.Autowired;
-import com.example.laispring.annotation.Service;
+import com.example.laispring.annotation.ioc.Autowired;
+import com.example.laispring.annotation.ioc.Service;
 import com.example.laispring.processor.InitializingBean;
 
 /**

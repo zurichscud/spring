@@ -1,6 +1,6 @@
 package com.example.laispring.component;
 
-import com.example.laispring.annotation.Component;
+import com.example.laispring.annotation.ioc.Component;
 import com.example.laispring.processor.BeanPostProcessor;
 
 /**

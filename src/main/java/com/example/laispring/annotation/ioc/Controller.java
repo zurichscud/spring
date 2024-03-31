@@ -1,4 +1,4 @@
-package com.example.laispring.annotation;
+package com.example.laispring.annotation.ioc;
 
 import java.lang.annotation.*;
 
